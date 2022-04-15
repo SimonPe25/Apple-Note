@@ -1,0 +1,38 @@
+
+.main {
+    &__background-image{
+    background-image: url("../../img/macos-monterey-1920x1080-23424.jpg");
+    background-size: 100% 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+    }
+
+    &__modal-wrapper {
+        position:fixed;
+        display:flex;
+        width:100%;
+        height:100%;
+        justify-content:center;
+        align-items:center;
+        background:rgba(0,0,0,.5);
+        z-index:100;
+    }
+
+    &__modal-window {
+        min-width: 54vw;
+        min-height: 85vh;
+        z-index:2;
+        background-color: aliceblue;
+        border-radius: 5px;
+    } 
+}
+
+.overlay {
+    position:absolute;
+    width:100%;
+    height:100%;
+    z-index:1;
+}
+

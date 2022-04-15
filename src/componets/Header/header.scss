@@ -1,0 +1,288 @@
+$base-radius: 4px;
+
+.header-container {
+    height: 5%;
+    background-color: #d7d7d7;
+    border-radius: $base-radius $base-radius 0px 0px;
+
+    &__box-menuromb {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__icon-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__container-first {
+        background-color: red;
+    }
+}
+
+.box-menuromb {
+    &__iconline {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 4px;
+        border-radius: $base-radius 0 0 $base-radius;
+        width: 2.05em;
+        height: 1.3em;
+        background-color: rgb(118, 120, 118);
+    }
+
+    &__iconromb {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 4px;
+        border-radius: 0 $base-radius $base-radius 0;
+        width: 2.05em;
+        //border: 1px solid rgb(118, 120, 118);
+        height: 1.3em;
+        background-color: white;
+    }
+}
+
+.menuhalf {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 8px;
+
+    &__icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: $base-radius;
+        padding-top: 3px;
+        width: 2.3em;
+        height: 1.3em;
+        background-color: white;
+    }
+}
+
+.icon {
+    &__red {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+}
+
+.menucircle {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    &__icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 3.2px;
+        padding-left: 1px;
+        width: 2.3em;
+        height: 1.3em;
+        border-radius: $base-radius;
+        background-color: white;
+    }
+}
+
+.idelete {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 2.3em;
+        height: 1.3em;
+        border-radius: $base-radius;
+        background-color: white;
+    }
+}
+
+.pencil {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    &__icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 2.3em;
+        height: 1.3em;
+        border-radius: $base-radius;
+        background-color: white;
+    }
+}
+.padlock {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    &__icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 5px;
+        width: 2.3em;
+        height: 1.3em;
+        border-radius: $base-radius;
+        background-color: white;
+    }
+}
+.lattice {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 5px;
+        width: 2.3em;
+        height: 1.3em;
+        border-radius: $base-radius;
+        background-color: white;
+    }
+}
+.check {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    &__icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 2.3em;
+        height: 1.3em;
+        border-radius: $base-radius;
+        background-color: white;
+    }
+}
+.aa {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 6px;
+        width: 2.3em;
+        height: 1.3em;
+        border-radius: $base-radius;
+        background-color: white;
+    }
+}
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    &__icon {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding-left: 3.5px;
+        padding-top: 6px;
+        width: 12.3em;
+        height: 1.3em;
+        border-radius: $base-radius;
+        background-color: white;
+    }
+}
+.arrow {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    &__icon {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding-left: 3.5px;
+        padding-top: 6px;
+        width: 2.3em;
+        height: 1.3em;
+        border-radius: $base-radius;
+        background-color: white;
+    }
+}
+.everest {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    &__icon {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding-left: 3.5px;
+        padding-top: 6px;
+        width: 2.3em;
+        height: 1.3em;
+        border-radius: $base-radius;
+        background-color: white;
+    }
+}
+
+.medic {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__icon {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding-left: 5px;
+        padding-top: 4px;
+        width: 2.3em;
+        height: 1.3em;
+        border-radius: $base-radius;
+        background-color: white;
+    }
+}
+.arrow {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    &__icon {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding-left: 8px;
+        padding-top: 3px;
+        width: 2.3em;
+        height: 1.3em;
+        border-radius: $base-radius;
+        background-color: white;
+    }
+}
+
+
+
+
+
+
+
+
+
+.aaa {
+    background-color: rgba(210, 21, 21, 0.372);
+}
+.a {
+    background-color: rgba(21, 21, 210, 0.372);
+}
+
