@@ -2,13 +2,16 @@
 import React from 'react';
 
 
-const Sidebar = () => {
- 
 
+const Sidebar = (props) => {
+ 
+    const {title} = props
+
+    console.log("side - ", title);
     return (
-       <>
-       SideBar
-       </>
+       <li>
+      {title}
+       </li>
     );
 };
 

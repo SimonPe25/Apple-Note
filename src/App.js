@@ -1,15 +1,19 @@
-import React from "react";
-import Main from "./componets/Main/Main";
+import React from 'react';
+import IndexedDB from './api/IndexedDB';
+
+
+
 
 
 
 
 function App() {
-    return (
-       <>
-        <Main/>
-      </>
-    )
+
+  return (
+    <>
+      <IndexedDB />
+    </>
+  )
 }
 
 export default App;

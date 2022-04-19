@@ -1,0 +1,36 @@
+$main-color-borger: #d7d7d765;
+
+.left-container {
+    border-right: 1.5px solid $main-color-borger;
+   // background-color: red;
+    height: 80.6vh;
+    overflow-y: scroll;
+}
+ 
+.right-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    height: 80.6vh;
+
+    &__clock {
+        margin-left: 5px;
+        font-size: 12px;
+        font-size: 700;
+        margin-bottom: 0em;
+        color: grey;
+    }
+    &__text {
+        margin-left: 5px;
+    }
+    &__area {
+        width: 430px;
+        height: 500px;
+        padding: 10px;
+    }
+}
+.active-link {
+    background-color: red;
+    cursor: default;
+}

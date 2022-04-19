@@ -1,7 +1,8 @@
 $base-radius: 4px;
 
 .header-container {
-    height: 5%;
+    min-height: 31px;
+    max-height: 31px;
     background-color: #d7d7d7;
     border-radius: $base-radius $base-radius 0px 0px;
 
