@@ -1,18 +1,15 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
 import { clocktime } from '../Clock/clocktime.js';
 import CustomLink from '../CustomLink/CustomLink.jsx';
 import './Table.scss'
 
 const Table = (props) => {
     
-    
-
-    const { onClick, table, text, color, url, id, className } = props
+    const {table, id, content} = props
 
     Table.defaultProps = {
         table: "Новая заметка",
-        text: "No additional text",
+        content: "No additional text",
         url: "" 
     }
     
@@ -20,11 +17,11 @@ const Table = (props) => {
     return (
         <>
             <CustomLink  to={`/${id ? id : "Create/note"}`}  >
-                <div className='table-create' onClick={() => console.log({ table })}>
+                <div className='table-create'>
                     <h1 className='table-create__table'>{table}</h1>
                     <div className='table-create__clock clock'>
                         <p className='clock__clock'>{clocktime()}</p>
-                        <p className='clock__text'>{text}</p>
+                        <p className='clock__text'>{content}</p>
                     </div>
                 </div>
             </CustomLink>

@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Outlet } from 'react-router-dom';
 import Header from '../Header/Header';
 import Workspase from '../Workspace/Workspace';
 import './main.scss';
@@ -17,8 +16,7 @@ const Main = () => {
     <div className='main__background-image'>
       <div className="main__modal-wrapper">
         <div className="main__modal-window">
-           <Header isOpenModalNote={isOpenModalNote}/>
-         
+           <Header isOpenModalNote={isOpenModalNote}/>  
            <Workspase/>
         </div>    
         <div className="overlay"></div>

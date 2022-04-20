@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { uid } from '../componets/Clock/uid'
-import List from '../componets/temp/List';
 import { Context } from '../context';
 import Main from '../componets/Main/Main.jsx';
 
@@ -38,6 +37,11 @@ const IndexedDB = () => {
         let name = document.getElementById('name').value.trim();
         let country = document.getElementById('country').value.trim();
         let key = document.whiskeyForm.getAttribute('data-key');
+
+        console.log("name - ", name);
+        console.log("country  --", country);
+
+
         if (key) {
             let whiskey = {
                 id: key,
@@ -46,7 +50,7 @@ const IndexedDB = () => {
             };
             let tx = makeTX('whiskeyStore', 'readwrite');
             tx.oncomplete = (ev) => {
-                //console.log(ev);
+                console.log(ev);
                 buildList();
                 clearForm();
             };
@@ -55,21 +59,22 @@ const IndexedDB = () => {
             let request = store.put(whiskey);
 
             request.onsuccess = (ev) => {
-                //  console.log('successfully updated an object');
+                 console.log('successfully updated an object');
 
             };
             request.onerror = (err) => {
-                //  console.log('error in request to update');
+                 console.log('error in request to update');
             };
         }
     };
 
     const btnAdd = (ev) => {
         ev.preventDefault();
-        console.log("btnAdd ", btnAdd);
 
         let name = document.getElementById('name').value.trim();
         let country = document.getElementById('country').value.trim();
+
+        console.log("Что здесь ", document.getElementById('name').value);
 
         let whiskey = {
             id: uid(),
@@ -77,15 +82,19 @@ const IndexedDB = () => {
             country
         };
 
+        console.log("Wiskey object ", whiskey);
+
         let tx = makeTX('whiskeyStore', 'readwrite');
         tx.oncomplete = (ev) => {
-            //console.log(ev);
+            console.log(ev);
             buildList();
             clearForm();
         };
 
         let store = tx.objectStore('whiskeyStore');
         let request = store.add(whiskey);
+
+        console.log("Requesr ", request);
 
         request.onsuccess = (ev) => {
             console.log('successfully added an object');
@@ -97,13 +106,15 @@ const IndexedDB = () => {
 
     const btnDelete = (ev) => {
         ev.preventDefault();
-        let key = document.whiskeyForm.getAttribute('data-key');
+    
+        let key = document.whiskeyFormDel.getAttribute('data-key-del');
+
         if (key) {
             let tx = makeTX('whiskeyStore', 'readwrite');
             tx.oncomplete = (ev) => {
                 console.log(ev);
                 buildList();
-                clearForm();
+                clearFormDel();
             };
 
             let store = tx.objectStore('whiskeyStore');
@@ -128,12 +139,12 @@ const IndexedDB = () => {
 
         getReq.onsuccess = (ev) => {
             let request = ev.target;
-            // console.log({ request });
+            console.log({ request });
             setdBList(request.result)
         };
 
         getReq.onerror = (err) => {
-            //  console.warn(err);
+            console.warn(err);
         };
     }
 
@@ -149,12 +160,21 @@ const IndexedDB = () => {
         if (ev) ev.preventDefault();
         document.whiskeyForm.reset();
         document.whiskeyForm.removeAttribute('data-key');
+     
+    }
+    function clearFormDel(ev) {
+        if (ev) ev.preventDefault();
+        document.whiskeyFormDel.reset();
+        document.whiskeyFormDel.removeAttribute('data-key-del');
     }
 
 
     const wList = (ev) => {
+        
 
         let id = ev.target.getAttribute('id');
+
+        console.log("Start wList - ");
 
         let tx = makeTX('whiskeyStore', 'readonly');
         tx.oncomplete = (ev) => { };
@@ -186,10 +206,6 @@ const IndexedDB = () => {
             };
         };
     }, []);
-
-    const logik = () => {
-        console.log("Yes worked");
-    }
 
 
     return (
