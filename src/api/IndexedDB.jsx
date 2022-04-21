@@ -82,8 +82,6 @@ const IndexedDB = () => {
             country
         };
 
-        console.log("Wiskey object ", whiskey);
-
         let tx = makeTX('whiskeyStore', 'readwrite');
         tx.oncomplete = (ev) => {
             console.log(ev);
@@ -93,8 +91,6 @@ const IndexedDB = () => {
 
         let store = tx.objectStore('whiskeyStore');
         let request = store.add(whiskey);
-
-        console.log("Requesr ", request);
 
         request.onsuccess = (ev) => {
             console.log('successfully added an object');

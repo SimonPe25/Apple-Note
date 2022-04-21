@@ -1,33 +1,25 @@
 import React from 'react';
 import ModalSubmit from '../ModalSubmit/ModalSubmit';
-import Search from '../Search/Search';
-
-
-
+import ReactMarkdown from 'react-markdown';
 
 const TextArea = (props) => {
-    
-    const {content, table, btnUpdate, btnAdd, btnDelete, id} = props;
-
-    const h1Style = {
-        color: '#3c2f56',
-        margin: '10px'
-      };
+  const esc = " ";
+    const { content, table, btnUpdate, btnAdd, btnDelete, id } = props;
+    const card = `# ${table}\n\n  ${esc + content}`;
+  
     return (
         <div>
-            <Search/>
-            <ModalSubmit 
-            onOk={btnUpdate} 
-            inputID = "name" 
-            areaID ="country" 
-            btnAdd={btnAdd} 
-            btnDelete={btnDelete} 
-            id={id}
-            contentDel={content}
-            tableDel={table}
+            <ModalSubmit
+                onOk={btnUpdate}
+                inputID="name"
+                areaID="country"
+                btnAdd={btnAdd}
+                btnDelete={btnDelete}
+                id={id}
+                contentDel={content}
+                tableDel={table}
             />
-            <h1 style={h1Style}>{table}</h1>
-            <div style={h1Style}>{content}</div>
+            <ReactMarkdown >{card}</ReactMarkdown>
         </div>
     );
 };

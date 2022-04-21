@@ -2,9 +2,8 @@ import React from 'react';
 import { Modal } from 'antd';
 
 const ModalContext = (props) => {
+    
  const {handleOk, handleCancel, isModalVisible, content, table, id} = props
-
- console.log("id", id);
 
     return (
         <>

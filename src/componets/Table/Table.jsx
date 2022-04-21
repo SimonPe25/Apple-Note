@@ -4,7 +4,6 @@ import CustomLink from '../CustomLink/CustomLink.jsx';
 import './Table.scss'
 
 const Table = (props) => {
-    
     const {table, id, content} = props
 
     Table.defaultProps = {
@@ -13,7 +12,6 @@ const Table = (props) => {
         url: "" 
     }
     
-
     return (
         <>
             <CustomLink  to={`/${id ? id : "Create/note"}`}  >

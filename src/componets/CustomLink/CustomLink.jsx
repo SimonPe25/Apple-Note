@@ -12,9 +12,6 @@ const CustomLink = ({children, to, className, ...props}) => {
         <Link 
         to={to}
        className={math ? "active" : "none"}
-    //     style={{
-    //         backgroundColor : math ? "green" : "white"       
-    // }}
         {...props}>
         {children}
         </Link>

@@ -8,12 +8,6 @@ import ModalContent from '../ModalContent/ModalContent';
 const ModalSubmit = (props) => {
   const { btnDelete, btnAdd, btnUpdate} = useContext(Context)
   const { inputID, areaID, id, contentDel, tableDel } = props
-  console.log("inputID -", inputID);
-  console.log("areaID -", areaID);
-  console.log("id -", id);
-  console.log("contentDel -", contentDel);
-  console.log("tableDel -", tableDel);
-
   const [isModalVisibleDel, setIsModalVisibleDel] = useState(false);
   const [isModalVisible, setIsModalVisible] = useState(false);
 
@@ -22,11 +16,8 @@ const ModalSubmit = (props) => {
   const [content, setContent] = useState(null);
   const [stateInput, setstateInput] = useState("");
   const [stateArea, setStateArea]=useState(contentDel)
- 
-
   const { TextArea } = Input;
 
-  
 //============== add function ============= 
  const chose = "Create new note";
   const showModalAdd = (ev) => {
@@ -40,7 +31,6 @@ const ModalSubmit = (props) => {
     btnAdd(ev)
     setIsModalVisible(false);
   };
-
 
 //============== update function =============
   const showModalUpdate = () => {
@@ -76,15 +66,11 @@ const handleCancelDel = () => {
   setIsModalVisibleDel(false);
 };
 
-
 //============== other =====================
 
   const handleCancel = () => {
     setIsModalVisible(false);
   };
-
-
-
 
   return (
     <>

@@ -4,13 +4,11 @@ import Workspase from '../Workspace/Workspace';
 import './main.scss';
 
 const Main = () => {
-
   const [isOpenCreateNote, setIsOpenCreateNote] = useState(false);
 
   const isOpenModalNote = () =>{
     setIsOpenCreateNote(!isOpenCreateNote)
   }
-
 
   return (
     <div className='main__background-image'>

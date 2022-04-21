@@ -4,30 +4,18 @@ import "./header.scss"
 import { Row, Col } from 'antd';
 import { useSearchParams } from 'react-router-dom';
 
-
 const Header = (props) => {
 
     const { isOpenModalNote } = props;
     const [searchParams, setSearchParams] = useSearchParams();
-
     const postQuery = searchParams.get('card') || '';
-
     const [search, setSearch] = useState(postQuery);
-
-    console.log("Search --", search);
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        console.log("Start submit");
-        // const form = e.target;
         const query = search;
-        console.log("query -- ", query);
         setSearchParams({ card: query })
-        console.log("searchParams -- ", searchParams);
     }
-
-
-
 
     return (
         <Row className='header-container' >

@@ -2,24 +2,18 @@ import React, { useContext } from 'react';
 import { Context } from '../../context';
 import { Row, Col } from 'antd';
 import './Workspace.scss';
-import TableList from '../TableList/TableList';
+import Sidebar from '../Sidebar/Sidebar';
 import Clocks from '../Clock/Clocks';
 import TextArea from '../TextArea/TextArea';
 import { Routes, Route} from "react-router-dom";
 
-
-
-
 const Workspace = () => {
-
     const { dBList } = useContext(Context)
-    
-
 
     return (
         <Row >
             <Col flex="167px" className="left-container">
-                <TableList />
+                <Sidebar />
             </Col>
             <Col flex="auto" className="right-container">
                 <div className="right-container__clock"><Clocks /></div>
