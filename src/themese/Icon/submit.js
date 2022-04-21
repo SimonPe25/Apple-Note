@@ -1,8 +1,9 @@
-export const search = ({ color, className, id, stroke }) => {
+export const submit = ({ color, className, id, stroke }) => {
 
     return (
         <svg xmlns="http://www.w3.org/2000/svg" width="4.5mm" height="4.5mm" version="1.1"
             viewBox="0 0 500 500"
+            className={className}
         >
             <g id="Слой_x0020_1">
                 <metadata id="CorelCorpID_0Corel-Layer" />

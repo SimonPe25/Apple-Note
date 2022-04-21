@@ -13,9 +13,9 @@ import {aa} from "./aa.js";
 import {everest} from "./everest.js";
 import {medic} from "./medic.js";
 import {arrow} from "./arrow.js";
-import {search} from "./search.js";
+import {submit} from "./submit.js";
 
 
 
 
-export  {compass, circle, menu, menuromb, menuhalf, menucircle, idelete, pencil, padlock,lattice, check, aa, everest,medic, arrow, search}
+export  {compass, circle, menu, menuromb, menuhalf, menucircle, idelete, pencil, padlock,lattice, check, aa, everest,medic, arrow, submit}

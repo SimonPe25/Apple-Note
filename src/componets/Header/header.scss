@@ -42,7 +42,6 @@ $base-radius: 4px;
         padding-bottom: 4px;
         border-radius: 0 $base-radius $base-radius 0;
         width: 2.05em;
-        //border: 1px solid rgb(118, 120, 118);
         height: 1.3em;
         background-color: white;
     }
@@ -122,6 +121,7 @@ $base-radius: 4px;
         background-color: white;
     }
 }
+
 .padlock {
     display: flex;
     align-items: center;
@@ -138,6 +138,7 @@ $base-radius: 4px;
         background-color: white;
     }
 }
+
 .lattice {
     display: flex;
     align-items: center;
@@ -154,6 +155,7 @@ $base-radius: 4px;
         background-color: white;
     }
 }
+
 .check {
     display: flex;
     align-items: center;
@@ -169,6 +171,7 @@ $base-radius: 4px;
         background-color: white;
     }
 }
+
 .aa {
     display: flex;
     align-items: center;
@@ -185,6 +188,7 @@ $base-radius: 4px;
         background-color: white;
     }
 }
+
 .search {
     display: flex;
     align-items: center;
@@ -195,13 +199,41 @@ $base-radius: 4px;
         align-items: center;
         justify-content: flex-start;
         padding-left: 3.5px;
-        padding-top: 6px;
         width: 12.3em;
         height: 1.3em;
         border-radius: $base-radius;
         background-color: white;
+        cursor: pointer;
+    }
+
+    &__iconsearch {
+        margin-top: 5px;
+        border-radius: 5px;
+    }
+    &__iconsearch:hover {
+        background: rgba(0, 0, 255, 0.1);
+        scale: 2;
+    }
+
+    &__inputsearch {
+        background-color: rgba(236, 234, 234, 0.324);
+        margin-left: 5px;
+        border: 0px;
+        height: 14px;
+        width: 140px;
+        line-height: normal;
+        font-size: 13px;
+        text-overflow: ellipsis;
+
+    }
+
+    &__inputsearch:hover {
+        background: #adaef448;
+        /* Цвет фона под ссылкой */
+        border-radius: 2px;
     }
 }
+
 .arrow {
     display: flex;
     align-items: center;
@@ -219,6 +251,7 @@ $base-radius: 4px;
         background-color: white;
     }
 }
+
 .everest {
     display: flex;
     align-items: center;
@@ -254,6 +287,7 @@ $base-radius: 4px;
         background-color: white;
     }
 }
+
 .arrow {
     display: flex;
     align-items: center;
@@ -283,7 +317,7 @@ $base-radius: 4px;
 .aaa {
     background-color: rgba(210, 21, 21, 0.372);
 }
+
 .a {
     background-color: rgba(21, 21, 210, 0.372);
 }
-

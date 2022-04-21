@@ -5,7 +5,7 @@ import './Workspace.scss';
 import TableList from '../TableList/TableList';
 import Clocks from '../Clock/Clocks';
 import TextArea from '../TextArea/TextArea';
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route} from "react-router-dom";
 
 
 
@@ -13,6 +13,7 @@ import { Routes, Route } from "react-router-dom";
 const Workspace = () => {
 
     const { dBList } = useContext(Context)
+    
 
 
     return (
@@ -23,22 +24,23 @@ const Workspace = () => {
             <Col flex="auto" className="right-container">
                 <div className="right-container__clock"><Clocks /></div>
                 <div className="right-container__area">
+                    
                     <Routes>
                         <Route path='/' element={<TextArea value="No added text" />} />
                         <Route path='/Create/note' element={<TextArea value="No added text" />} />
                         {dBList.map(card =>
                             <Route
                                 path={`/:${card.id}`}
-                                element={<TextArea 
-                                    content={card.country} 
+                                element={<TextArea
+                                    content={card.country}
                                     id={card.id}
-                                    table={card.name}                                  
-                                    />}
-                                key={card.id}                          
+                                    table={card.name}
+                                />}
+                                key={card.id}
                             >
                             </Route>
                         )}
-                         <Route path='*' element={<TextArea value="No added text" />}  />
+                        <Route path='*' element={<TextArea value="No added text" />} />
                     </Routes>
                 </div>
             </Col>
