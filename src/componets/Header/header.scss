@@ -208,7 +208,7 @@ $base-radius: 4px;
 
     &__iconsearch {
         margin-top: 5px;
-        border-radius: 5px;
+        border-radius: px;
     }
     &__iconsearch:hover {
         background: rgba(0, 0, 255, 0.1);
@@ -224,12 +224,11 @@ $base-radius: 4px;
         line-height: normal;
         font-size: 13px;
         text-overflow: ellipsis;
-
     }
 
     &__inputsearch:hover {
         background: #adaef448;
-        border-radius: 2px;
+        border-radius: 5px;
     }
 }
 
