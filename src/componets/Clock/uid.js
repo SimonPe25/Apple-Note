@@ -4,5 +4,3 @@ export const uid = () => {
   randy = randy.toString(36).slice(0, 12).padStart(12, '0').toLocaleUpperCase();
   return ''.concat(timmy, '-', randy);
 };
-
-

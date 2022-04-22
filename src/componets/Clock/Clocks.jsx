@@ -4,7 +4,7 @@ import Clock from './Clock';
 const Clocks = () => {
     return (
         <>
-           <Clock/> 
+            <Clock />
         </>
     );
 };

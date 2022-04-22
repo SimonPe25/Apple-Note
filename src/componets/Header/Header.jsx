@@ -10,7 +10,6 @@ const Header = (props) => {
     const [searchParams, setSearchParams] = useSearchParams();
     const postQuery = searchParams.get('card') || '';
     const [search, setSearch] = useState(postQuery);
-
     const handleSubmit = (e) => {
         e.preventDefault()
         const query = search;
@@ -66,21 +65,21 @@ const Header = (props) => {
             </Col>
             <Col flex="12.35em" className="header-container__search search">
                 <div className='search__icon'>
-                        <Icon 
-                        type="submit" 
-                        color="#d7d7d7" 
-                        stroke="#454543" 
-                        onClick={handleSubmit} 
+                    <Icon
+                        type="submit"
+                        color="#d7d7d7"
+                        stroke="#454543"
+                        onClick={handleSubmit}
                         className="search__iconsearch"
-                        />
-                        <input
-                            type="search"
-                            className='search__inputsearch'
-                            name="search"
-                            value={search}
-                            onChange={e => setSearch(e.target.value)}
-                            placeholder="Search note"
-                        />
+                    />
+                    <input
+                        type="search"
+                        className='search__inputsearch'
+                        name="search"
+                        value={search}
+                        onChange={e => setSearch(e.target.value)}
+                        placeholder="Search note"
+                    />
                 </div>
             </Col>
         </Row>

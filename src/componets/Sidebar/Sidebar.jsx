@@ -15,19 +15,19 @@ const Sidebar = () => {
             <Table />
             <ul>
                 {dBList
-                    .filter(card => card.name.includes(postQuery))
+                    .filter(card => card.note.includes(postQuery))
                     .map(card =>
                         <Table
-                            table={card.name.length > 15 ?
-                                `${card.name.substr(0, 15)}...` :
-                                card.name}
+                            table={card.note.length > 15 ?
+                                `${card.note.substr(0, 15)}...` :
+                                card.note}
                             id={card.id}
                             key={card.id}
-                            content={card.country.length > 12 ?
-                                `${card.country.substr(0, 12)}...` :
-                                card.country}
+                            content={card.noteContent.length > 12 ?
+                                `${card.noteContent.substr(0, 12)}...` :
+                                card.noteContent}
                         >
-                      </Table>)}
+                        </Table>)}
             </ul>
         </>
     )

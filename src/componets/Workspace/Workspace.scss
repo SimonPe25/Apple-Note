@@ -2,7 +2,6 @@ $main-color-borger: #d7d7d765;
 
 .left-container {
     border-right: 1.5px solid $main-color-borger;
-   // background-color: red;
     height: 80.6vh;
     overflow-y: scroll;
 }
@@ -15,6 +14,7 @@ $main-color-borger: #d7d7d765;
     height: 80.6vh;
 
     &__clock {
+        margin-top: 10px;
         margin-left: 5px;
         font-size: 12px;
         font-size: 700;
