@@ -27,7 +27,7 @@ const IndexedDB = () => {
         ev.preventDefault();
         const note = document.getElementById('note').value.trim();
         const noteContent = document.getElementById('noteContent').value.trim();
-        const key = document.whiskeyForm.getAttribute('data-key');
+        const key = document.noteForm.getAttribute('data-key');
 
         if (key) {
             const whiskey = {
@@ -80,7 +80,7 @@ const IndexedDB = () => {
 
     const btnDelete = (ev) => {
         ev.preventDefault();
-        const key = document.whiskeyFormDel.getAttribute('data-key-del');
+        const key = document.noteFormDel.getAttribute('data-key-del');
         if (key) {
             const tx = makeTX('noteStore', 'readwrite');
             tx.oncomplete = (ev) => {
@@ -125,14 +125,14 @@ const IndexedDB = () => {
 
     function clearForm(ev) {
         if (ev) ev.preventDefault();
-        document.whiskeyForm.reset();
-        document.whiskeyForm.removeAttribute('data-key');
+        document.noteForm.reset();
+        document.noteForm.removeAttribute('data-key');
     }
 
     function clearFormDel(ev) {
         if (ev) ev.preventDefault();
-        document.whiskeyFormDel.reset();
-        document.whiskeyFormDel.removeAttribute('data-key-del');
+        document.noteFormDel.reset();
+        document.noteFormDel.removeAttribute('data-key-del');
     }
 
     const wList = (ev) => {
@@ -146,7 +146,7 @@ const IndexedDB = () => {
             const whiskey = request.result;
             document.getElementById('note').value = whiskey.note;
             document.getElementById('noteContent').value = whiskey.noteContent;
-            document.whiskeyForm.setAttribute('data-key', whiskey.id);
+            document.noteForm.setAttribute('data-key', whiskey.id);
         };
         req.onerror = (err) => {
             console.warn(err);

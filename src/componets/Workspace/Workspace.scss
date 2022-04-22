@@ -3,7 +3,7 @@ $main-color-borger: #d7d7d765;
 .left-container {
     border-right: 1.5px solid $main-color-borger;
     height: 80.6vh;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
  
 .right-container {

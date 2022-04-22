@@ -89,7 +89,7 @@ const handleCancelDel = () => {
         </> : null}
       </div>
       <Modal title={theme} visible={isModalVisible} onOk={(theme === chose) ? handleOkAdd : handleOkUpdate} onCancel={handleCancel}>
-        <form name="whiskeyForm" data-key={id}>
+        <form name="noteForm" data-key={id}>
           <label htmlFor={inputID}>{table}</label>
           <Input 
           id={inputID} 

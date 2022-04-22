@@ -8,7 +8,7 @@ const ModalContext = (props) => {
     return (
         <>
             <Modal title="Do you want to delete note?" visible={isModalVisible} onOk={handleOk} onCancel={handleCancel}>
-            <form name="whiskeyFormDel" data-key-del={id}>
+            <form name="noteFormDel" data-key-del={id}>
                 <h1>{table}</h1>
                 <p>{content}</p>
                 </form>
