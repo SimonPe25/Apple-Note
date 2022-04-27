@@ -1,5 +1,7 @@
 $base-radius: 4px;
 
+
+
 .header-container {
     min-height: 31px;
     max-height: 31px;
@@ -23,8 +25,7 @@ $base-radius: 4px;
     }
 }
 
-.box-menuromb {
-    &__iconline {
+.iconline {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -32,20 +33,57 @@ $base-radius: 4px;
         border-radius: $base-radius 0 0 $base-radius;
         width: 2.05em;
         height: 1.3em;
-        background-color: rgb(118, 120, 118);
+        background-color: white;
+        -webkit-transition: width 2s, height 2s, background-color 2s, -webkit-transform 2s;
+        transition: width 2s, height 2s, background-color 2s, transform 1s;
+
+        .iconline-icon {
+            fill: #ffffff;
+            stroke: #292928;
+        }
     }
 
-    &__iconromb {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding-bottom: 4px;
-        border-radius: 0 $base-radius $base-radius 0;
-        width: 2.05em;
-        height: 1.3em;
-        background-color: white;
+    .iconline:hover {
+        transition: 0.5c;
+        cursor: pointer;
+        background-color: rgba(93, 93, 93, 0.837);
+        -webkit-transform: rotate(180deg);
+        transform: scale(1.05);
+        .iconline-icon {
+            stroke: #ffffff;
+        }
+    }
+
+.menuromb {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 4px;
+    border-radius: 0 $base-radius $base-radius 0;
+    width: 2.05em;
+    height: 1.3em;
+    background-color: white;
+    -webkit-transition: width 2s, height 2s, background-color 1s, -webkit-transform 2s;
+    transition: width 2s, height 2s, background-color 1s, transform 1s;
+    cursor: pointer;
+
+    .menuromb-icon {
+        fill: #ffffff;
+        stroke: #292928;
     }
 }
+
+.menuromb:hover {
+    transition: 0.5c;
+    cursor: pointer;
+    background-color: rgba(93, 93, 93, 0.837);
+    -webkit-transform: rotate(180deg);
+    transform: scale(1.05);
+    .menuromb-icon {
+        stroke: #ffffff;
+    }
+}
+
 
 .menuhalf {
     display: flex;
@@ -61,8 +99,26 @@ $base-radius: 4px;
         padding-top: 3px;
         width: 2.3em;
         height: 1.3em;
+        cursor: pointer;
         background-color: white;
+        -webkit-transition: width 2s, height 2s, background-color 1s, -webkit-transform 2s;
+        transition: width 2s, height 2s, background-color 1s, transform 1s;
+
+        .menuhalf-icon {
+            fill: #ffffff;
+            stroke: #292928;
+        }
     }
+
+    &__icon:hover {
+        transition: 0.5c;
+        background-color: rgba(93, 93, 93, 0.837);
+        transform: scale(1.05);
+        .menuhalf-icon {
+            stroke: #292928;
+        }
+    }
+
 }
 
 .icon {
@@ -87,6 +143,23 @@ $base-radius: 4px;
         height: 1.3em;
         border-radius: $base-radius;
         background-color: white;
+        -webkit-transition: width 2s, height 2s, background-color 1s, -webkit-transform 2s;
+        transition: width 2s, height 2s, background-color 1s, transform 1s;
+        cursor: pointer;
+
+        .menucircle-icon {
+            fill: #ffffff;
+            stroke: #292928;
+        }
+    }
+
+    &__icon:hover {
+        transition: 0.5c;
+        background-color: rgba(93, 93, 93, 0.837);
+        transform: scale(1.05);
+        .menucircle-icon {
+            stroke: #292928;
+        }
     }
 }
 
@@ -103,6 +176,23 @@ $base-radius: 4px;
         height: 1.3em;
         border-radius: $base-radius;
         background-color: white;
+        -webkit-transition: width 2s, height 2s, background-color 1s, -webkit-transform 2s;
+        transition: width 2s, height 2s, background-color 1s, transform 1s;
+        cursor: pointer;
+
+        .idelete-icon {
+            fill: #ffffff;
+            stroke: #292928;
+        }
+    }
+
+    &__icon:hover {
+        transition: 0.5c;
+        background-color: rgba(93, 93, 93, 0.837);
+        transform: scale(1.05);
+        .idelete-icon {
+            stroke: #292928;
+        }
     }
 }
 
@@ -119,7 +209,24 @@ $base-radius: 4px;
         height: 1.3em;
         border-radius: $base-radius;
         background-color: white;
+        -webkit-transition: width 2s, height 2s, background-color 1s, -webkit-transform 2s;
+        transition: width 2s, height 2s, background-color 1s, transform 1s;
+        cursor: pointer;
+
+        .pencil-icon {
+            fill: #ffffff;
+            stroke: #292928;
+        }
     }
+    &__icon:hover {
+        transition: 0.5c;
+        background-color: rgba(93, 93, 93, 0.837);
+        transform: scale(1.05);
+        .pencil-icon {
+            stroke: #292928;
+        }
+    }
+
 }
 
 .padlock {
@@ -136,6 +243,23 @@ $base-radius: 4px;
         height: 1.3em;
         border-radius: $base-radius;
         background-color: white;
+        -webkit-transition: width 2s, height 2s, background-color 1s, -webkit-transform 2s;
+        transition: width 2s, height 2s, background-color 1s, transform 1s;
+        cursor: pointer;
+
+        .padlock-icon {
+            fill: #ffffff;
+            stroke: #292928;
+        }
+    }
+
+    &__icon:hover {
+        transition: 0.5c;
+        background-color: rgba(93, 93, 93, 0.837);
+        transform: scale(1.05);
+        .padlock-icon {
+            stroke: #292928;
+        }
     }
 }
 
@@ -153,6 +277,24 @@ $base-radius: 4px;
         height: 1.3em;
         border-radius: $base-radius;
         background-color: white;
+        -webkit-transition: width 2s, height 2s, background-color 1s, -webkit-transform 2s;
+        transition: width 2s, height 2s, background-color 1s, transform 1s;
+        cursor: pointer;
+
+        .lattice-icon {
+            fill: #ffffff;
+            stroke: #292928;
+        }
+    }
+
+    &__icon:hover {
+        transition: 0.5c;
+        background-color: rgba(93, 93, 93, 0.837);
+        transform: scale(1.05);
+        .lattice-icon {
+            fill: white;
+            stroke: #292928;
+        }
     }
 }
 
@@ -169,6 +311,24 @@ $base-radius: 4px;
         height: 1.3em;
         border-radius: $base-radius;
         background-color: white;
+        -webkit-transition: width 2s, height 2s, background-color 1s, -webkit-transform 2s;
+        transition: width 2s, height 2s, background-color 1s, transform 1s;
+        cursor: pointer;
+
+        .check-icon {
+            fill: #ffffff;
+            stroke: #292928;
+        }
+    }
+
+    &__icon:hover {
+        transition: 0.5c;
+        background-color: rgba(52, 52, 52, 0.837);
+        transform: scale(1.05);
+        .check-icon {
+            fill: white;
+            stroke: #292928;
+        }
     }
 }
 
@@ -186,6 +346,21 @@ $base-radius: 4px;
         height: 1.3em;
         border-radius: $base-radius;
         background-color: white;
+        -webkit-transition: width 2s, height 2s, background-color 1s, -webkit-transform 2s;
+        transition: width 2s, height 2s, background-color 1s, transform 1s;
+        cursor: pointer;
+
+        .aa-icon {
+            fill: #454543;
+        }
+    }
+    &__icon:hover {
+        transition: 0.5c;
+        background-color: rgba(93, 93, 93, 0.837);
+        transform: scale(1.05);
+        .aa-icon {
+            fill: white;
+        }
     }
 }
 
@@ -204,12 +379,14 @@ $base-radius: 4px;
         border-radius: $base-radius;
         background-color: white;
         cursor: pointer;
+
     }
 
     &__iconsearch {
         margin-top: 5px;
         border-radius: px;
     }
+
     &__iconsearch:hover {
         background: rgba(0, 0, 255, 0.1);
         scale: 2;
@@ -247,6 +424,15 @@ $base-radius: 4px;
         height: 1.3em;
         border-radius: $base-radius;
         background-color: white;
+        -webkit-transition: width 2s, height 2s, background-color 1s, -webkit-transform 2s;
+        transition: width 2s, height 2s, background-color 1s, transform 1s;
+        cursor: pointer;
+    }
+
+    &__icon:hover {
+        transition: 0.5c;
+        background-color: rgba(93, 93, 93, 0.837);
+        transform: scale(1.05);
     }
 }
 
@@ -265,8 +451,25 @@ $base-radius: 4px;
         height: 1.3em;
         border-radius: $base-radius;
         background-color: white;
+        -webkit-transition: width 2s, height 2s, background-color 1s, -webkit-transform 2s;
+        transition: width 2s, height 2s, background-color 1s, transform 1s;
+        cursor: pointer;
+        .everest-icon {
+            fill: #ffffff;
+            stroke: #292928;
+        }
+    }
+
+    &__icon:hover {
+        transition: 0.5c;
+        background-color: rgba(93, 93, 93, 0.837);
+        transform: scale(1.05);
+        .everest-icon {
+            stroke: #292928;
+        }
     }
 }
+
 
 .medic {
     display: flex;
@@ -283,6 +486,23 @@ $base-radius: 4px;
         height: 1.3em;
         border-radius: $base-radius;
         background-color: white;
+        -webkit-transition: width 2s, height 2s, background-color 1s, -webkit-transform 2s;
+        transition: width 2s, height 2s, background-color 1s, transform 1s;
+        cursor: pointer;
+        .medic-icon {
+            fill: #ffffff;
+            stroke: #292928;
+        }
+    }
+
+    &__icon:hover {
+        transition: 0.5c;
+        background-color: rgba(93, 93, 93, 0.837);
+        transform: scale(1.05);
+        .medic-icon {
+            stroke: #292928;
+        }
+
     }
 }
 
@@ -301,5 +521,18 @@ $base-radius: 4px;
         height: 1.3em;
         border-radius: $base-radius;
         background-color: white;
+        .arrow-icon {
+            fill: #ffffff;
+            stroke: #292928;
+        }
+    }
+    &__icon:hover {
+        transition: 0.5c;
+        background-color: rgba(93, 93, 93, 0.837);
+        transform: scale(1.05);
+        .arrow-icon {
+            stroke: #292928;
+        }
+
     }
 }

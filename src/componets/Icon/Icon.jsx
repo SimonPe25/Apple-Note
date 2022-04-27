@@ -2,7 +2,7 @@ import React from 'react';
 import * as Icons from '../../themese/Icon'
 
 const Icon = (props) => {
-  const { type, color, onClick, className, stroke } = props
+  const { type, color, onClick, className, stroke, fill } = props
   const IconJSX = Icons[type]
 
   if (!IconJSX) return null
@@ -13,7 +13,8 @@ const Icon = (props) => {
         color: color,
         type: type,
         className: className,
-        stroke: stroke
+        stroke: stroke,
+        fill:fill
       })}
     </span>
   );
