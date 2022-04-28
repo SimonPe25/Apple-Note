@@ -12,7 +12,7 @@ const Sidebar = () => {
 
     return (
         <>
-            <Table />
+            <Table/>
             <ul>
                 {dBList
                     .filter(card => card.note.includes(postQuery))
