@@ -5,10 +5,23 @@ import Main from '../componets/Main/Main.jsx';
 
 const IndexedDB = () => {
 
-    const [dBList, setdBList] = useState([]);
+    const defailtContent = {
+        'id': 'L3N0CQ2D-008DOUGGWRLTt',
+        'note': "Fresh Market",
+        'noteContent': "1. Milk 2. 30 eggs onion 2kg 3. Tomatoes 4kg 4. Sugar 3 kg 5. Sour cream 0.5l 6. Potato 6kg 7. Detergent 2 pcs"
+    }
+
+    const [dBList, setdBList] = useState([defailtContent]);
     let db = null;
     let objectStore = null;
     const DBOpenReq = indexedDB.open('NoteDB', 6);
+    
+    
+    DBOpenReq.addEventListener('success', (ev)=>{
+        db = ev.target.result
+        const tx = makeTX('noteStore', 'readwrite');
+        tx.objectStore('noteStore').put(defailtContent);
+    })
 
     DBOpenReq.addEventListener('error', (err) => { });
     DBOpenReq.addEventListener('success', (ev) => {
@@ -17,9 +30,7 @@ const IndexedDB = () => {
     DBOpenReq.addEventListener('upgradeneeded', (ev) => {
         db = ev.target.result;
         if (!db.objectStoreNames.contains('noteStore')) {
-            objectStore = db.createObjectStore('noteStore', {
-                keyPath: 'id',
-            });
+            objectStore = db.createObjectStore('noteStore', { keyPath: 'id' });
         }
     });
 
@@ -30,7 +41,7 @@ const IndexedDB = () => {
         const key = document.noteForm.getAttribute('data-key');
 
         if (key) {
-            const whiskey = {
+            const base = {
                 id: key,
                 note,
                 noteContent
@@ -42,7 +53,7 @@ const IndexedDB = () => {
             };
 
             const store = tx.objectStore('noteStore');
-            const request = store.put(whiskey);
+            const request = store.put(base);
             request.onsuccess = (ev) => {
                 console.log('successfully updated an object');
             };
@@ -56,7 +67,7 @@ const IndexedDB = () => {
         ev.preventDefault();
         const note = document.getElementById('note').value.trim();
         const noteContent = document.getElementById('noteContent').value.trim();
-        const whiskey = {
+        const base = {
             id: uid(),
             note,
             noteContent
@@ -69,7 +80,7 @@ const IndexedDB = () => {
         };
 
         const store = tx.objectStore('noteStore');
-        const request = store.add(whiskey);
+        const request = store.add(base);
         request.onsuccess = (ev) => {
             console.log('successfully added an object');
         };
@@ -143,22 +154,20 @@ const IndexedDB = () => {
         const req = store.get(id);
         req.onsuccess = (ev) => {
             const request = ev.target;
-            const whiskey = request.result;
-            document.getElementById('note').value = whiskey.note;
-            document.getElementById('noteContent').value = whiskey.noteContent;
-            document.noteForm.setAttribute('data-key', whiskey.id);
+            const base = request.result;
+            document.getElementById('note').value = base.note;
+            document.getElementById('noteContent').value = base.noteContent;
+            document.noteForm.setAttribute('data-key', base.id);
         };
         req.onerror = (err) => {
             console.warn(err);
         };
     };
-
+  
     useEffect(() => {
         DBOpenReq.onsuccess = function (ev) {
             const tx = makeTX('noteStore', 'readonly');
-            tx.oncomplete = (ev) => {
-            };
-
+            tx.oncomplete = (ev) => { };
             const store = tx.objectStore('noteStore');
             const getReq = store.getAll()
             getReq.onsuccess = (ev) => {
